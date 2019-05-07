@@ -2,7 +2,7 @@ var posts = [
     // {
     //     author: {
     //         userID: 1651656,
-    //         photo: 'asd.png',
+    //         photo: 'belauzas.jpg',
     //         name: 'Vardenis',
     //         surname: 'Pavardenis',
     //         url: 'vardenis-pavardenis'
@@ -13,7 +13,7 @@ var posts = [
     //             value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus?',
     //             background: 'red'
     //         },
-    //         img: ['1.png', '2.png']
+    //         img: ['p1.jpg', 'p2.jpg']
     //     },
     //     interactions: {
     //         likes: {
@@ -27,9 +27,9 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
-            name: 'Vardenis',
-            surname: 'Pavardenis',
+            photo: 'belauzas.jpg',
+            name: 'John',
+            surname: 'Doe',
             url: 'vardenis-pavardenis'
         },
         date: 1557130091712,
@@ -50,7 +50,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -73,7 +73,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -83,7 +83,7 @@ var posts = [
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             },
-            img: ['1.png']
+            img: ['p1.jpg']
         },
         interactions: {
             likes: {
@@ -97,7 +97,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -105,9 +105,8 @@ var posts = [
         date: 1557130091712,
         content: {
             text: {
-                value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            },
-            img: ['1.png', '2.png']
+                value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus?',
+            }
         },
         interactions: {
             likes: {
@@ -121,7 +120,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -131,7 +130,7 @@ var posts = [
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             },
-            img: ['1.png', '2.png', '3.png']
+            img: ['p1.jpg', 'p2.jpg']
         },
         interactions: {
             likes: {
@@ -145,7 +144,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -155,7 +154,7 @@ var posts = [
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             },
-            img: ['1.png', '2.png', '3.png', '4.png']
+            img: ['p1.jpg', 'p2.jpg', 'p3.jpg']
         },
         interactions: {
             likes: {
@@ -169,7 +168,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -179,7 +178,7 @@ var posts = [
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             },
-            img: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png']
+            img: ['p1.jpg', 'p2.jpg', 'p3.jpg', 'p4.jpg']
         },
         interactions: {
             likes: {
@@ -193,7 +192,31 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
+            name: 'Vardenis',
+            surname: 'Pavardenis',
+            url: 'vardenis-pavardenis'
+        },
+        date: 1557130091712,
+        content: {
+            text: {
+                value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            },
+            img: ['p1.jpg', 'p2.jpg', 'p3.jpg', 'p4.jpg', 'p1.jpg', 'p2.jpg', 'p3.jpg']
+        },
+        interactions: {
+            likes: {
+                like: 5,
+                smile: 0,
+                love: 8
+            },
+            comments: 0
+        }
+    },
+    {
+        author: {
+            userID: 1651656,
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -216,7 +239,7 @@ var posts = [
     {
         author: {
             userID: 1651656,
-            photo: 'asd.png',
+            photo: 'belauzas.jpg',
             name: 'Vardenis',
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
@@ -224,7 +247,7 @@ var posts = [
         date: 1557130091712,
         content: {
             text: {
-                value: 'Lorem ipsum dolor sit',
+                value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                 background: 'red'
             }
         },
