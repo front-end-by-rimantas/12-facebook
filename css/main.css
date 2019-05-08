@@ -8,7 +8,7 @@ body * {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.container, .post, .post > *, .post header .texts > *, .post section .post-gallery .post-image, .post footer > * {
+.container, #chat_window > *, #chat_window #message_editor textarea, .post, .post > *, .post header .texts > *, .post section .post-gallery .post-image, .post footer > * {
   display: inline-block;
   width: 100%;
 }
@@ -16,6 +16,10 @@ body * {
 body > header {
   height: 40px;
   background-color: #375999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 
 body main > * {
@@ -28,18 +32,132 @@ body main nav {
   width: 200px;
   height: calc(100vh - 40px);
   background-color: #EEE;
+  position: fixed;
+  left: 0;
+  top: 40px;
+  bottom: 0;
 }
 
 body main .feed {
   width: calc(100% - 500px);
+  margin: 40px 0 40px 200px;
 }
 
 body main .ads {
   width: 200px;
+  margin: 40px 0 40px 0;
 }
 
 body main .chat {
   width: 100px;
+  background-color: #EEE;
+  position: fixed;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+}
+
+#chat_window {
+  display: inline-block;
+  width: 280px;
+  border: 1px solid #CCC;
+  border-radius: 4px 4px 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 120px;
+  background-color: #FFF;
+  overflow: hidden;
+  -webkit-box-shadow: 0 -2px 4px #0007;
+          box-shadow: 0 -2px 4px #0007;
+}
+
+#chat_window > * {
+  float: left;
+}
+
+#chat_window header {
+  background-color: #DDD;
+  color: #333;
+  line-height: 20px;
+  padding: 5px 10px;
+}
+
+#chat_window #messages {
+  height: 300px;
+  overflow-y: auto;
+}
+
+#chat_window #messages .msg-row {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#chat_window #messages .msg-row > * {
+  display: inline-block;
+  width: auto;
+  max-width: 80%;
+  padding: 5px 10px;
+}
+
+#chat_window #messages .msg-row > * .emoji {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin: -4px 4px;
+  background-image: url(../img/emoji/smile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#chat_window #messages .msg-row > * .emoji.emoji-smile {
+  background-image: url(../img/emoji/smile.png);
+}
+
+#chat_window #messages .msg-row .my {
+  float: right;
+  background-color: #658eda;
+  color: #FFF;
+  border-radius: 15px 0 0 15px;
+}
+
+#chat_window #messages .msg-row .other {
+  float: left;
+  background-color: #EEE;
+  color: #333;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid #CCC;
+}
+
+#chat_window #message_editor {
+  border-top: 1px solid #CCC;
+}
+
+#chat_window #message_editor textarea {
+  height: 80px;
+  padding: 10px;
+  resize: none;
+  border: none;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  outline-color: transparent;
+}
+
+#chat_window #message_editor .btn-send {
+  display: inline-block;
+  padding: 5px 10px;
+  line-height: 18px;
+  font-size: 18px;
+  background-color: #375999;
+  color: #FFF;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .post {

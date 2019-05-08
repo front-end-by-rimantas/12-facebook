@@ -1,5 +1,10 @@
 "use strict";
 
+var msgFeed = document.getElementById('messages'),
+    textarea = document.querySelector('#message_editor > textarea'),
+    sendBtn = document.querySelector('#message_editor > .btn-send');
+
+
 document.getElementById('feed').innerHTML = renderFeed( posts );
 
 function renderFeed( data ) {
@@ -187,8 +192,47 @@ function showAllText( event ) {
     event.path[1].innerHTML = event.path[1].getAttribute('data-text');
 }
 
+function replaceSmiles( text ) {
+    var msg = text;
+    msg = msg.replace(/\:\)/g, '<span class="emoji emoji-smile"></span>');
+    return msg;
+}
+
+function sendMessage( who='me', msg='' ) {
+    if ( msg === undefined || msg === '' ) {
+        msg = textarea.value;
+    }
+
+    if ( msg === '' ) {
+        return;
+    }
+
+    if ( typeof(who) !== 'string' ) {
+        who = 'me';
+    }
+
+    // isvedame i ekrana
+    // logic ? true : false
+    msgFeed.innerHTML += `<div class="msg-row">
+                            <div class="${who === 'me' ? 'my' : 'other'}">${replaceSmiles(msg)}</div>
+                        </div>`;
+
+    // turi nuvaziuoti iki zinuciu saraso apacios
+    msgFeed.scrollTop = msgFeed.scrollHeight;
+
+    if ( who === 'me' ) {
+        // gauna atsakyma
+        sendMessage( 'papuga', msg );
+    }
+
+    // isvalome editoriu
+    return textarea.value = '';
+}
+
 document.querySelectorAll('.read-more').forEach(link => {
     link.addEventListener('click', showAllText);
     // kame skirtumas??? :O
     // this.addEventListener('click', showAllText);
-});;
+});
+
+sendBtn.addEventListener('click', sendMessage);

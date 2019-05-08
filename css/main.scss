@@ -22,6 +22,10 @@ body {
     > header {
         height: 40px;
         background-color: $mainColor;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
     }
     main {
         > * {
@@ -34,18 +38,129 @@ body {
             width: 200px;
             height: calc(100vh - 40px);
             background-color: #EEE;
+            position: fixed;
+            left: 0;
+            top: 40px;
+            bottom: 0;
         }
 
         .feed {
             width: calc(100% - 500px);
+            margin: 40px 0 40px 200px;
         }
 
         .ads {
             width: 200px;
+            margin: 40px 0 40px 0;
         }
 
         .chat {
             width: 100px;
+            background-color: #EEE;
+            position: fixed;
+            right: 0;
+            top: 40px;
+            bottom: 0;
+        }
+    }
+}
+
+#chat_window {
+    display: inline-block;
+    width: 280px;
+    border: 1px solid #CCC;
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    background-color: #FFF;
+    overflow: hidden;
+    box-shadow: 0 -2px 4px #0007;
+
+    > * {
+        @extend %display-width;
+        float: left;
+    }
+
+    header {
+        background-color: #DDD;
+        color: #333;
+        line-height: 20px;
+        padding: 5px 10px;
+    }
+    #messages {
+        height: 300px;
+        overflow-y: auto;
+
+        .msg-row {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+
+            > * {
+                display: inline-block;
+                width: auto;
+                max-width: 80%;
+                padding: 5px 10px;
+
+                .emoji {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    margin: -4px 4px;
+                    background-image: url(../img/emoji/smile.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    &.emoji-smile {
+                        background-image: url(../img/emoji/smile.png);
+                    }
+                }
+            }
+
+            .my {
+                float: right;
+                background-color: #658eda;
+                color: #FFF;
+                border-radius: 15px 0 0 15px;
+            }
+            .other {
+                float: left;
+                background-color: #EEE;
+                color: #333;
+                border-radius: 0 15px 15px 0;
+                border: 1px solid #CCC;
+            }
+        }
+    }
+    #message_editor {
+        border-top: 1px solid #CCC;
+
+        textarea {
+            @extend %display-width;
+            height: 80px;
+            padding: 10px;
+            resize: none;
+            border: none;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 5px;
+            outline-color: transparent;
+        }
+        .btn-send {
+            display: inline-block;
+            padding: 5px 10px;
+            line-height: 18px;
+            font-size: 18px;
+            background-color: #375999;
+            color: #FFF;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
         }
     }
 }
