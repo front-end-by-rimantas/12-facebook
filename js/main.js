@@ -30,13 +30,61 @@ function renderHeader( userInfo, date ) {
                     <div class="author">
                         <a href="#${userInfo.url}">${userInfo.name} ${userInfo.surname}</a>
                     </div>
-                    <div class="date">6hrs <- ${date}</div>
+                    <div class="date">${convertTime( date )}</div>
                 </div>
                 <div class="actions">
                     <i class="fa fa-ellipsis-h"></i>
                 </div>
             </header>`;
     return HTML;
+}
+
+function convertTime( miliseconds ) {
+    var now = new Date().getTime(),
+        diff = Math.round((now - miliseconds) / 1000),
+        seconds = diff,
+        minutes = seconds / 60,
+        hours = minutes / 60,
+        days = hours / 24;
+
+    //0s - 14s -> Just now
+    if ( seconds < 15 ) {
+        return 'Just now';
+    }
+    // 15s - 59s -> [x]sec
+    if ( seconds < 60 ) {
+        return seconds+'secs';
+    }
+    // 1m - 59m -> [x]mim
+    if ( minutes < 60 ) {
+        return minutes+'min';
+    }
+    // 1h - 12h -> [x]hrs
+    if ( hours < 13 ) {
+        return hours+'hrs';
+    }
+    // 13h - <24h -> 
+    if ( hours < 24 ) {
+        return 'Today';
+    }
+    // 24 - <48 -> Yesterday
+    if ( hours < 48 ) {
+        return 'Yesterday';
+    }
+    // 48 - 7d -> [x]days 
+    if ( days < 8 ) {
+        return days+'days ago';
+    }
+    // 1w - 4w -> [x]weeks ago
+    if ( days < 29 ) {
+        return Math.floor(days/7)+'weeks ago';
+    }
+    // 1month - 12month -> [x]12month
+    if ( days / 365.25 < 1 ) {
+        return Math.floor(days/30.42)+'months ago';
+    }
+    // 1y - ... -> [x]years ago
+    return Math.floor(days / 365.25)+'years ago';
 }
 
 function renderContent( data ) {
@@ -136,13 +184,11 @@ function renderFooter( data ) {
 }
 
 function showAllText( event ) {
-    console.log('read more clicked');
-    console.log( event );
-    
+    event.path[1].innerHTML = event.path[1].getAttribute('data-text');
 }
 
 document.querySelectorAll('.read-more').forEach(link => {
-    this.addEventListener('click', showAllText);
+    link.addEventListener('click', showAllText);
     // kame skirtumas??? :O
     // this.addEventListener('click', showAllText);
 });;

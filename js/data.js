@@ -32,7 +32,7 @@ var posts = [
             surname: 'Doe',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime(),
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus?',
@@ -55,7 +55,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 28,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus?',
@@ -78,7 +78,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 60 * 4,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -102,7 +102,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 60 * 60 * 16,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit, doloremque, dolorum suscipit cum voluptate quibusdam aut dolor odio rerum vitae corrupti neque ducimus? Rerum vitae corrupti neque ducimus?',
@@ -125,7 +125,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 60 * 60 * 24 * 3,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -149,7 +149,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 60 * 60 * 24 * 16,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -173,7 +173,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 60 * 60 * 24 * 90,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -197,7 +197,7 @@ var posts = [
             surname: 'Pavardenis',
             url: 'vardenis-pavardenis'
         },
-        date: 1557130091712,
+        date: (new Date()).getTime() - 1000 * 60 * 60 * 24 * 800,
         content: {
             text: {
                 value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',

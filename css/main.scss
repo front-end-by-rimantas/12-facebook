@@ -9,9 +9,13 @@ body * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.container {
+%display-width {
     display: inline-block;
     width: 100%;
+}
+
+.container {
+    @extend %display-width;
 }
 
 body {
@@ -47,16 +51,14 @@ body {
 }
 
 .post {
-    display: inline-block;
-    width: 100%;
+    @extend %display-width;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #CCC;
     border-radius: 4px;
 
     > * {
-        display: inline-block;
-        width: 100%;
+        @extend %display-width;
     }
     header {
         > * {
@@ -73,8 +75,7 @@ body {
             width: calc(100% - 100px);
             margin: 0 10px 0 20px;
             > * {
-                display: inline-block;
-                width: 100%;
+                @extend %display-width;
             }
             .author {
                 line-height: 20px;
@@ -122,6 +123,7 @@ body {
                 height: 240px;
                 width: calc(100% + 20px);
                 margin: 0 -10px -20px;
+                padding: 20px;
             }
 
             &.bg-red {
@@ -137,7 +139,7 @@ body {
             overflow: hidden;
 
             .post-image {
-                width: 100%;
+                @extend %display-width;
                 height: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -199,8 +201,7 @@ body {
     }
     footer {
         > * {
-            display: inline-block;
-            width: 100%;
+            @extend %display-width;
             border-top: 1px solid #CCC;
         }
     }
